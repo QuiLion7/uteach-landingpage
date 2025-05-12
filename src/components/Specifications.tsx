@@ -135,11 +135,11 @@ const Specifications = () => {
           >
             <Image
               src="/desktop.png"
-              width={300}
+              width={290}
               height={200}
               quality={100}
               alt="Picture Desktop"
-              className="rounded-lg object-cover w-[300px] h-auto sm:w-[500px] sm:h-[300px] lg:w-[550px] lg:h-[340px]"
+              className="rounded-lg object-cover w-[290px] h-auto md:w-[500px] md:h-[300px] lg:w-[550px] lg:h-[340px]"
             />
           </motion.div>
 
@@ -152,7 +152,7 @@ const Specifications = () => {
             className="absolute -top-13 -left-5 lg:-left-20 w-auto h-[400px] lg:h-[480px] flex justify-center items-center z-5 lg:z-10"
           >
             <Image
-              src="/icons/icons.svg"
+              src="/icons/iconHeaderStarYellow.svg"
               width={100}
               height={100}
               quality={100}

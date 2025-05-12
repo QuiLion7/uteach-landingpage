@@ -25,8 +25,8 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="flex items-center justify-center p-2 w-full h-[660px] lg:h-[370px] bg-[#0f172a] text-white">
-      <div className="max-w-screen-2xl flex flex-col lg:flex-row w-full h-full justify-center items-center p-4 gap-2">
+    <section className="flex items-center justify-center p-2 w-full h-[660px] md:h-[370px] bg-[#0f172a] text-white">
+      <div className="max-w-screen-2xl flex flex-col md:flex-row w-full h-full justify-center items-center p-4 gap-2">
         {stats.map((stat, index) => {
           return (
             <motion.div
