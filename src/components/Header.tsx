@@ -144,7 +144,7 @@ const Header = () => {
           className="flex w-full lg:h-full justify-center items-center h-[400px] "
         >
           <div className="relative w-full h-full flex flex-col justify-end items-center -z-20">
-            <div className="absolute -top-30 -right-10 lg:-top-18 lg:-right-16 flex flex-col gap-3 justify-center items-center w-[250px] h-[400px] z-20 ">
+            <div className="absolute -top-32 -right-5 lg:-top-18 lg:-right-16 flex flex-col gap-3 justify-center items-center w-[250px] h-[400px] z-20 ">
               {chatMessages.map((msg, index) => {
                 const isSent = msg.type === "sent";
                 return (
