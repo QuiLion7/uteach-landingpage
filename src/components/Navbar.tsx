@@ -13,16 +13,18 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { IconChevronCompactDown } from "@tabler/icons-react";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [openSheet, setOpenSheet] = useState(false);
 
   const navigationLinks = [
-    { label: "Products", path: "/" },
-    { label: "Solutions", path: "#" },
-    { label: "Pricing", path: "#" },
-    { label: "Resources", path: "#" },
+    { label: "Products", path: "/", menu: false },
+    { label: "Solutions", path: "#", menu: false },
+    { label: "Pricing", path: "#", menu: false },
+    { label: "Resources", path: "#", menu: true },
   ];
 
   return (
@@ -62,7 +64,23 @@ export default function Navbar() {
                       isActive ? "text-[#e06119]" : "hover:text-[#e06119]"
                     }`}
                   >
-                    <span>{link.label}</span>
+                    {!link.menu ? (
+                      <span>{link.label}</span>
+                    ) : (
+                      <Popover>
+                        <PopoverTrigger asChild>
+                          <span className="flex justify-center items-center gap-2">
+                            {link.label} <IconChevronCompactDown stroke={2} />
+                          </span>
+                        </PopoverTrigger>
+                        <PopoverContent className="w-60 flex flex-col justify-center">
+                          <p className="text-[#e06119]">
+                            Call this developer for the next step
+                          </p>
+                        </PopoverContent>
+                      </Popover>
+                    )}
+
                     {isActive && (
                       <motion.div
                         className="absolute bottom-0 left-0 h-0.5 w-full bg-[#e06119]"
