@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next",
+      "config": {
+        "installCommand": "npm install --legacy-peer-deps --ignore-scripts",
+        "buildCommand": "next build"
+      }
+    }
+  ],
+  "env": {
+    "NPM_FLAGS": "--legacy-peer-deps --ignore-scripts",
+    "NEXT_TELEMETRY_DISABLED": "1"
+  }
+}
